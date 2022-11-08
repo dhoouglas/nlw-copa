@@ -53,7 +53,7 @@ export default function Home() {
             <Image src={iconCheckImg} alt=""/>
             <div className="flex flex-col">
               <span className="font-bold text-2xl">+2.034</span>
-              <span> Bolões Criados</span>
+              <span>Bolões Criados</span>
             </div>
           </div>
 
@@ -63,7 +63,7 @@ export default function Home() {
           <Image src={iconCheckImg} alt=""/>
             <div className="flex flex-col">
               <span className="font-bold text-2xl">+2.034</span>
-              <span> Bolões Criados</span>
+              <span>Palpites enviados</span>
             </div>
           </div>
         </div>
