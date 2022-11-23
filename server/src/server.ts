@@ -1,14 +1,12 @@
 import Fastify from 'fastify';
 import cors from '@fastify/cors';
-
+import jwt from '@fastify/jwt';
 
 import { poolRoutes } from './routes/pool';
 import { userRoutes } from './routes/user';
 import { gameRoutes } from './routes/game';
 import { guessRoutes } from './routes/guess';
 import { authRoutes } from './routes/auth';
-
-
 
 async function bootstrap() {
     const fastify = Fastify({
@@ -17,6 +15,11 @@ async function bootstrap() {
 
     await fastify.register(cors, {
         origin: true,
+    });
+
+    // Em produção VARIAVEL DE AMBIENTE
+    await fastify.register(jwt, {
+        secret: 'nlwcopa',
     });
 
     await fastify.register(poolRoutes)
